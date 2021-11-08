@@ -4,14 +4,20 @@ public class Lab02_Bai_04
 {
     public static void main(String[] args) 
     {
+        int chucNang;
+        do
+        {
+            
         System.out.println("--------- MEUNU ---------");
         System.out.println("1/ GIAI PHUONG TRINH BAC NHAT ");
         System.out.println("2/ GIAI PHUONG TRINH BAC HAI ");
         System.out.println("3/ TINH TIEN DIEN ");
+        System.out.println("5/ THOAT THOI CHUONG TRINH ");
         System.out.println("-----------------------------------------");
         Scanner nhapChucNang = new Scanner(System.in);
         System.out.println("Nhap Vao Chuc Nang Can Thuc Hien");
-        int chucNang = nhapChucNang.nextInt();
+        chucNang = nhapChucNang.nextInt();
+        
         switch(chucNang)
         {
             case 1:
@@ -38,14 +44,22 @@ public class Lab02_Bai_04
 
             case 3:
             {
-                double nhapsuDungDien;
+                double nhapsuDungDien; 
                 System.out.println("Nhap Vao So Dien Ma Ban Da Su Dung: ");
                 nhapsuDungDien = nhapChucNang.nextDouble();
                 tinhTiendien(nhapsuDungDien);               
             }; break;
 
-            default: System.out.println("Nhap Sai ");
-        }
+            case 4:
+            {
+                System.out.println("Nhap Sai: ");
+            }
+
+            //default: System.out.println("Nhap Sai ");
+        }  
+    } while( chucNang >= 1 && chucNang <=4);
+
+    System.out.println("Da Thoat Ra Khoi Chuong Trinh");
 
     }
 
