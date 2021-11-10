@@ -25,13 +25,19 @@ public class StudentTestDrive
 
             studentsList[i] = new Student(name, tuoi, que);
             
-
         }
-         for(int x =0; x <studentsList.length; x++)
+        System.out.println("Xuat Ra -------------------------------------------------------");
+
+         /*for(int x =0; x <studentsList.length; x++)
          { 
              studentsList[x].inthongtin();
              
              System.out.println("-----------------------------------");
+         }*/
+
+         for( Student student : studentsList)
+         {
+             student.inthongtin();
          }
         
     }
