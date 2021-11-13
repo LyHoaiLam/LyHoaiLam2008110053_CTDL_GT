@@ -6,7 +6,7 @@ public class Cow
         String breed;
         String color;
         
-        Cow()
+        public Cow()
         {
 
         }
@@ -16,7 +16,7 @@ public class Cow
             weight = w;
         }
 
-        Cow(float w, String br, String cl)
+        public Cow(float w, String br, String cl)
         {
             weight = w;
             breed = br;
