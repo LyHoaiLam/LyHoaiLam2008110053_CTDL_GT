@@ -14,10 +14,10 @@ public class Lab04_Bai03
         List<SanPham> dsSanPham = new ArrayList<>();
         
         nhapSP(dsSanPham);
-        //inSSSP(dsSanPham);
+        inSSSP(dsSanPham);
         System.out.println("--------------------------------------");
-        //sapXepSP(dsSanPham);
-        //inSSSP(dsSanPham);   
+        sapXepSP(dsSanPham);
+        inSSSP(dsSanPham);   
      
     }
 
@@ -47,7 +47,7 @@ public class Lab04_Bai03
        
     }
 
-    /*static void inSSSP(List<SanPham> dsSanPham)
+    static void inSSSP(List<SanPham> dsSanPham)
     {
 
         for(SanPham sanPham : dsSanPham)
@@ -57,9 +57,9 @@ public class Lab04_Bai03
 
         }
 
-    }*/
+    }
 
-    /*static void sapXepSP(List<SanPham> dsSanPham)
+    static void sapXepSP(List<SanPham> dsSanPham)
     {
 
         Comparator<SanPham> comp;
@@ -76,7 +76,7 @@ public class Lab04_Bai03
 
         Collections.sort(dsSanPham, comp);
         
-    }*/
+    }
 
     
 }

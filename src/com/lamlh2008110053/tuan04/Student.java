@@ -20,9 +20,8 @@ public class Student
 
     void inthongtin()
     {
-        System.out.println("Ten Sinh Vien: "+ name);
-        System.out.println("Tuoi Sinh Vien: "+ tuoi);
-        System.out.println("Que Cua Sinh Vien: "+ que);
+        System.out.println("Ten Sinh Vien: "+ name + "Tuoi Sinh Vien: "+ tuoi + "Que Sinh Vien: "+ que);
+       
     }
     
 }
