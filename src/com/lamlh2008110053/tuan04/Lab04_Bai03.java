@@ -13,11 +13,33 @@ public class Lab04_Bai03
     {
         List<SanPham> dsSanPham = new ArrayList<>();
         
-        nhapSP(dsSanPham);
-        inSSSP(dsSanPham);
-        System.out.println("--------------------------------------");
-        sapXepSP(dsSanPham);
-        inSSSP(dsSanPham);   
+        nhapSP(dsSanPham);// Ham Nhap San Pham
+        inSSSP(dsSanPham);// Ham In Thong Tin San Pham
+        
+        System.out.println("--------------------------------------Sau Khi Sap Xep");
+        sapXepSP(dsSanPham);// Ham Sap Xep Gia Tien Cua San Pham Tang Dan
+        inSSSP(dsSanPham);// In Danh Sach Ra Sau Khi Sap Xep Gia Tien Cac San Pham Tang Dan
+        System.out.println("--------------------------------------Tim Theo Ten");
+        SanPham sp = timTenSp("Ca Phe Den", dsSanPham);// Tim Ten San Pham "Ca Phe Den"
+       
+        if(sp != null)
+        {
+           
+             sp.inThongTinSP();// Neu Ten San Pham Co Trong Danh Sach Thi In Thong Tin San Pham Do Ra       
+        }
+        else
+        {
+            System.out.println("Khong Co: ");// Ten San Pham Khong Co Trong Danh Sach Thi In Ra "Khong Co"
+        }
+        
+        System.out.println("--------------------------------------Xoa San Pham");
+        String tensp = "Ca Phe Sua";// Tim San Pham Co Ten Ca Phe Sua
+        xoaSP(tensp, dsSanPham);// Xoa Ca Phe Sua Ra Khoi Danh Sach
+        inSSSP(dsSanPham);// In Danh Sach Moi Ra Sau Khi Da Xoa Ca Phe Sua Ra Khoi Danh Sach
+
+        System.out.println("--------------------------------------Dao Loan Vi Tri");
+        Collections.shuffle(dsSanPham);// Dao Loan Vi Tri San Pham
+        inSSSP(dsSanPham);// In Ra Danh Sach Sau Khi Da Doi Vi Tri San Pham Ngau Nhien 
      
     }
 
@@ -29,19 +51,19 @@ public class Lab04_Bai03
         double dgg;
         double ggd;
         double tva;
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < 3; i++)
         {
 
             System.out.println("Nhap Vao ten San Pham Thu "+ (i+1));
             nn = nhapSP.nextLine();
             System.out.println("Nhap Don Gia San Pham Thu "+ (i+1));
             dgg = nhapSP.nextDouble();
-            System.out.println("Nhap Giam Gia San Pham Thu "+ (i+1));
+            /*System.out.println("Nhap Giam Gia San Pham Thu "+ (i+1));
             ggd = nhapSP.nextDouble();
             System.out.println("Nhap Vao Thue VAT San Pham Thu "+ (i+1));
-            tva = nhapSP.nextDouble();
+            tva = nhapSP.nextDouble();*/
             nhapSP.nextLine();
-            dsSanPham.add(new SanPham(nn, dgg, ggd, tva));
+            dsSanPham.add(new SanPham(nn, dgg/*, ggd, tva*/));
          
         }
        
@@ -76,6 +98,29 @@ public class Lab04_Bai03
 
         Collections.sort(dsSanPham, comp);
         
+    }
+
+    static SanPham timTenSp(String tenSP, List<SanPham> dsSanPham)
+    {
+        SanPham result = null;
+        for(SanPham sanPhamss : dsSanPham)
+        {
+
+            if(sanPhamss.tenSP.equals(tenSP))
+            {
+
+                result = sanPhamss;
+
+            }
+        }
+        return result;
+
+    }
+
+    static void xoaSP(String tenSP, List<SanPham> dsSanPham)
+    {
+        SanPham sanPhamss = timTenSp(tenSP, dsSanPham);
+        dsSanPham.remove(sanPhamss);
     }
 
     

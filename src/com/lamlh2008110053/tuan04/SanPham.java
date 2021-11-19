@@ -12,19 +12,19 @@ public class SanPham
 
     }
 
-    SanPham(String n, double d, double g, double t)
+    SanPham(String n, double d/*, double g, double t*/)
     {
         tenSP = n;
         donGia = d;
-        giamGia = g;
-        thueVAT = t;
+        /*giamGia = g;
+        thueVAT = t;*/
     }
     void inThongTinSP()
     {
         System.out.println("Ten San Pham: "+ tenSP);
         System.out.println("Gia Thanh San Pham: "+ donGia);
-        System.out.println("Giam Gia San Pham: "+ giamGia);
-        System.out.println("Thue VAT: "+ thueVAT);
+        /*System.out.println("Giam Gia San Pham: "+ giamGia);
+        System.out.println("Thue VAT: "+ thueVAT);*/
     }
 
 }
