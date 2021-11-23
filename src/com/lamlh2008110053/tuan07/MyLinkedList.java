@@ -10,7 +10,7 @@ public class MyLinkedList
 
     }
 
-    void add(int data)
+    void addd(int data)
     {
         //Tao 1 Node moi
         Node newNode = new Node(data);
@@ -28,10 +28,10 @@ public class MyLinkedList
 
     void remove()
     {
-
+        // List<ThucPham> danhSachThucPham
     }
 
-    void print()
+    void printtt()
     {
         Node current = head;
         if(head == null)
