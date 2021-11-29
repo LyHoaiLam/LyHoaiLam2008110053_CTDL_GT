@@ -58,12 +58,9 @@ public class Lab04_Bai03
             nn = nhapSP.nextLine();
             System.out.println("Nhap Don Gia San Pham Thu "+ (i+1));
             dgg = nhapSP.nextDouble();
-            /*System.out.println("Nhap Giam Gia San Pham Thu "+ (i+1));
-            ggd = nhapSP.nextDouble();
-            System.out.println("Nhap Vao Thue VAT San Pham Thu "+ (i+1));
-            tva = nhapSP.nextDouble();*/
+           
             nhapSP.nextLine();
-            dsSanPham.add(new SanPham(nn, dgg/*, ggd, tva*/));
+            dsSanPham.add(new SanPham(nn, dgg));
          
         }
        

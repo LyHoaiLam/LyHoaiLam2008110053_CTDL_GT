@@ -22,14 +22,14 @@ public class Lab04_Bai01
 
         Scanner nhapST = new Scanner(System.in);
         System.out.println("Nhap Vao Danh Sach Cac So Thuc: ");
-        double soThuc;
+        double soThuc[] = new double[9];
 
         for(int i = 0; i < 5; i++)
         {   
 
             System.out.println("Nhap Vao So Thuc Thu: "+ (i+1));
-            soThuc = nhapST.nextDouble();
-            nhapSoThuc.add(soThuc);
+            soThuc[i] = nhapST.nextDouble();
+            nhapSoThuc.add(soThuc[i]);
 
         }   
 
