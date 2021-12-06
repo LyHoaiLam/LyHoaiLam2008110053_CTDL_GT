@@ -25,6 +25,7 @@ public class AppleTestDrive
         System.out.println("2/ Them Tao Vao Danh Sach ");
         System.out.println("3. Tim Tao Theo Mau Sac");
         System.out.println("4. In Ra Danh Sach Tao");
+        System.out.println("5. Thoat Khoi Chuong Trinh");
         System.out.println("-----------------------------------------");
         Scanner nhapCNN = new Scanner(System.in);
         nhapCN = nhapCNN.nextInt();
@@ -32,6 +33,7 @@ public class AppleTestDrive
         {
             case 1: 
             {
+                // In Ra Danh Sach Apple Co San Trong Kho
                 danhSachAppleCoSan(khoApple);
                 inThongTinApple2(khoApple);
                 break;
@@ -39,25 +41,29 @@ public class AppleTestDrive
 
             case 2:
             {
+                // Them Apple Vao Danh Sach
                 nhapApple2(khoApple);
                 break;
             }
 
             case 3:
             {
+                // Tim Apple Theo Mau Sac
          
                 break;
             }
 
             case 4: 
             {
+                // In Ra Danh Sach Apple Moi Nhat
                 inThongTinApple2(khoApple);
                 break;
             }
 
         }
 
-        }while( nhapCN >= 1 && nhapCN <=5);
+        }while( nhapCN >= 1 && nhapCN <=4);
+        System.out.println("DA THOAT KHOI CHUONG TRINH");
     }
 
     static void danhSachAppleCoSan(List<Apple> khoApple)
@@ -97,18 +103,5 @@ public class AppleTestDrive
         }
     }
 
-
-    static void timTheoMauSacApple(String mauSacApple, List<Apple> khoApple)
-    {
-        Apple result = null;
-        for(Apple appleS : khoApple)
-        {
-            if(appleS.mauSacApple.equals(mauSacApple))
-            result = appleS;
-        }
-    }
-
-
    
 }
-
