@@ -47,7 +47,20 @@ public class AppleTestDrive
             }
 
             case 3:
-            {
+            {   
+                Apple timmauApple;
+                System.out.println("Nhap Mau Apple Can Tim: ");
+                String ssc;
+                ssc = nhapCNN.nextLine();
+                timmauApple = timMauApple("Do Vang", khoApple);
+                if(timmauApple != null)
+                {
+                    timmauApple.inThongTinApple();
+                }
+                else
+                {
+                    System.out.println("Khong Co !!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                }           
                 // Tim Apple Theo Mau Sac
          
                 break;
@@ -103,5 +116,21 @@ public class AppleTestDrive
         }
     }
 
+    
+    static Apple timMauApple(String mauSacApple, List<Apple> khoApple)
+    {
+        Apple result = null;
+        for(Apple apples : khoApple)
+        {
+
+            if(apples.mauSacApple.equals(mauSacApple))
+            {
+
+                result = apples;
+
+            }
+        }
+        return result;
+    }
    
 }
