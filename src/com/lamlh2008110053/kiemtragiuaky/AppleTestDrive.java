@@ -50,9 +50,8 @@ public class AppleTestDrive
             {   
                 Apple timmauApple;
                 System.out.println("Nhap Mau Apple Can Tim: ");
-                String ssc;
-                ssc = nhapCNN.nextLine();
-                timmauApple = timMauApple("Do Vang", khoApple);
+                String ssc = nhapCNN.nextLine();
+                timmauApple = timMauApple(ssc, khoApple);
                 if(timmauApple != null)
                 {
                     timmauApple.inThongTinApple();

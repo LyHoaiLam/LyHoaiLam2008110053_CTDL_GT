@@ -9,7 +9,7 @@ public class CowTestDrive
         cow = new Cow(15.2f); 
         cow.inthongtin1();
         
-        cow = new   Cow(20, " Viet Nam ", " Den Trang ");
+        cow = new Cow(99, " Viet Nam ", " Den Trang ");
         cow.inthongtin1();
         cow.inthongtin2();
 

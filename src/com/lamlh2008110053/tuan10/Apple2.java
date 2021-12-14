@@ -2,6 +2,7 @@ package com.lamlh2008110053.tuan10;
 
 public class Apple2 
 {
+    
     int id;
     String color;
     double weight;
@@ -22,7 +23,7 @@ public class Apple2
 
     public void printfApple2()
     {
-        System.out.println("ID: "+ id + " " + " Color: "+ color + " "+ " Weight: "+ weight);
+        System.out.println("ID: " + id + " " + " Color: " + color + " " + " Weight: " + weight);
     }
 
     

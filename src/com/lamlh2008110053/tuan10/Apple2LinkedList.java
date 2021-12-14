@@ -22,8 +22,7 @@ public class Apple2LinkedList
             {
                 emtpy = false;
             }
-        return emtpy;
-        
+        return emtpy;        
     }
 
 
@@ -56,9 +55,88 @@ public class Apple2LinkedList
                 tail.next = newAppleNode;
                 tail = newAppleNode;
             }
+    }
+
+
+    public Apple2Node findAppleById(int id)
+    {
+        Apple2Node apple2Node = null;
+        if(isEmpty())
+            {
+                System.out.println("List is Empty");
+            }
+        else
+            {
+                Apple2Node current;
+                current = head;
+                while(current != null)
+                    {
+                        if(current.data.id == id)
+                            {
+                                apple2Node = current;
+                            }
+                        current = current.next;                           
+                    }
+            }
+            return apple2Node;
+    }
+    
+
+    public void addPreApple2Node(int id, Apple2 apple2)
+    {
+        Apple2Node node = null;
+        Apple2Node preApple2Node;
+        if(isEmpty())
+            {
+                System.out.println("List is empty");
+            }
+        else
+            {
+                Apple2Node current;
+                current = head;
+                if(head.data.id == id)
+                {
+                    addFirst(apple2);
+                }
+                while(current.next != null)
+                {
+                    preApple2Node = current;
+                    if(current.data.id == id)
+                    {
+                        Apple2Node newApple2Node = new Apple2Node(apple2);
+                        preApple2Node.next = newApple2Node;
+                        newApple2Node.next = current;
+                    }
+                    current = current.next;
+                }
+            }      
+    }
+
+
+    void deteleLast()
+    {
+        if(isEmpty())
+        {
+
+        }
+
+        Apple2Node temp;
+        temp = head;
+        while(temp != null)
+        {
+            if(temp.next == tail)
+            {
+                tail = temp;
+                tail.next = null;
+            }
+
+            temp = temp.next;
+
+        }
 
     }
 
+    
 
 
 }
