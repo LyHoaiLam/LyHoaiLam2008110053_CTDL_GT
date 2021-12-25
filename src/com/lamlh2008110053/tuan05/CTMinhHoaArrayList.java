@@ -8,7 +8,7 @@ public class CTMinhHoaArrayList
     public static void main(String[] args) 
     {
         // ArrayList Khong Co Dinh Kieu
-        ArrayList a_ArrayList = new ArrayList();//ArrayList<>() Xoa <> Di Roi
+        //ArrayList a_ArrayList = new ArrayList();//ArrayList<>() Xoa <> Di Roi
 
         List b_List = new ArrayList();//ArrayList<>() Xoa <> Di Roi
 
@@ -18,9 +18,6 @@ public class CTMinhHoaArrayList
         b_List.add(true);//Phan Tu 3
 
         System.out.println(b_List);
-        System.out.println("-------------------------------------------------------------------------------------");
-
-        System.out.println(b_List.toString());
         System.out.println("-------------------------------------------------------------------------------------");
 
         Integer x = (Integer)b_List.get(2);// Ham get(int index) Lay Ra Tung Phan Tu 2
@@ -47,7 +44,11 @@ public class CTMinhHoaArrayList
         ArrayList<ThucPham> arrayListThucPham = new ArrayList<ThucPham>();
         arrayListThucPham.add(new ThucPham("Ca Chua", 520000));
         arrayListThucPham.add(new ThucPham("Tao", 1200000));
-        arrayListThucPham.add(new ThucPham("Ca Rot", 1600000));
+        arrayListThucPham.add(new ThucPham("Hanh Tim", 1600000));
+        arrayListThucPham.add(new ThucPham("Rau Cai Dang", 1600000));
+        arrayListThucPham.add(new ThucPham("Cu Su Hao", 1600000));
+        arrayListThucPham.add(new ThucPham("Cu Khoai Lan", 1600000));
+        arrayListThucPham.add(new ThucPham("Ca Khoa Mon", 1600000));
         
         ThucPham thucPham222 = arrayListThucPham.get(0);
         System.out.println("Ten Thuc Pham: " + thucPham222.tenThucPham + "---" + "Gia Tien Thuc Pham: " + thucPham222.giaTienThucPham);
@@ -56,6 +57,34 @@ public class CTMinhHoaArrayList
         thucPham222 = arrayListThucPham.get(2);
         System.out.println("Ten Thuc Pham: " + thucPham222.tenThucPham + "---" + "Gia Tien Thuc Pham: " + thucPham222.giaTienThucPham);
         System.out.println("-------------------------------------------------------------------------------------");
+
+        arrayListThucPham.add(4, new ThucPham("Hanh Tay", 6300000));// Them vao Phan Tu Thu 4 trong arrayListThucPham   
+        System.out.println("Them Vao Phan Tu Thu 4");
+        for (ThucPham thucPham2 : arrayListThucPham) 
+        {
+            thucPham2.inThongTinthucPham();    
+        }
+
+        System.out.println("-------------------------------------------------------------------------------------");
+        System.out.println("Xoa Phan Tu Thu 2");
+        arrayListThucPham.remove(2);// Xoa Phan Tu Thu 2 Trong arrayListThucPham
+        for (ThucPham thucPham2 : arrayListThucPham) 
+        {
+            thucPham2.inThongTinthucPham();    
+        }
+
+        System.out.println("-------------------------------------------------------------------------------------");
+        System.out.println("Xoa Phan Tu Thu 4");
+        arrayListThucPham.remove(4);// Xoa Phan Tu Thu 4 Trong arrayListThucPham
+        for (ThucPham thucPham2 : arrayListThucPham) 
+        {
+            thucPham2.inThongTinthucPham();    
+        }
+
+
+        System.out.println("-------------------------------------------------------------------------------------");
+        System.out.println("Thay Doi Phan Tu Tai Vi Tri 3");
+        arrayListThucPham.set(3, new ThucPham("Ly Hoai Lam", 21));// Thay Doi Phan Tu Tai Vi Tri 3
         for (ThucPham thucPham2 : arrayListThucPham) 
         {
             thucPham2.inThongTinthucPham();    

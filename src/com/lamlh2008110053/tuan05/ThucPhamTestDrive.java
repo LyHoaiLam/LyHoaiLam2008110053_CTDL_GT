@@ -19,6 +19,8 @@ public class ThucPhamTestDrive
 
         danhSachThucPham.remove(3);// Xoa Phan Tu Vi Tri Thu 3 Trong Mang
         inThongTinThucPham(danhSachThucPham);
+        System.out.println("Tim Ten Hoai Phong");
+      
 
 
     }
