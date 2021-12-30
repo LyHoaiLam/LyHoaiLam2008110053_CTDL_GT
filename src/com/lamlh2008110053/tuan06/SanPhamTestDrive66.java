@@ -8,11 +8,10 @@ import java.util.Scanner;
 
 public class SanPhamTestDrive66 
 {
-    static Scanner nhapSP66 = new Scanner(System.in);    
-
+    public static Scanner nhapSP66 = new Scanner(System.in);    
+    static List dsSanPham66 = new ArrayList<>();
     public static void main(String[] args) 
     {
-        List dsSanPham66 = new ArrayList<>();
        
         int chonChucNang;
         dsCoSanSanPham66(dsSanPham66);
@@ -25,7 +24,7 @@ public class SanPhamTestDrive66
             System.out.println("[4] Tim Va Xoa SanPham66 Theo Ten         /");
             System.out.println("[5] In Ra Danh Sach SanPham66 Moi Nhat    /");
             System.out.println("[6] In Ra Danh Sach Tang Dan Theo Don Gia /");
-            System.out.println("[7] In Ra Danh Sach Tang Dan Theo Don Gia /");
+            System.out.println("[7] In Ra Danh Sach Giam Dan Theo Don Gia /");
             System.out.println("[8] In Ra Danh Sach Ngau Nhien            /");
             System.out.println("[9] Out Ra Chuong Trinh                   /");
             System.out.println("Nhap Chuc Nang Su Dung:                   /");
@@ -41,6 +40,9 @@ public class SanPhamTestDrive66
                 {
                     // Nhap Them San Pham Vao Danh Sach
                     nhapSanPham66(dsSanPham66);
+                   
+                    
+                    
                     System.out.println("-------------------------------------------------------");
                 }break;
 
@@ -138,8 +140,12 @@ public class SanPhamTestDrive66
             System.out.println("NHAP SO LUONG: ");
             soLuong = nhapSP66.nextInt();
             nhapSP66.nextLine();
+            
             dsSanPham66.add(new SanPham66(name, giaThanh, soLuong));
         }
+      
+
+
     }
 
     public static SanPham66 timSanPham66TheoTen(String tenSanPham66, List<SanPham66> dsSanPham66)

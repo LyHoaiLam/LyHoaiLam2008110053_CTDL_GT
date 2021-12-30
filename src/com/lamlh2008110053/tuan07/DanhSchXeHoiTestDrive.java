@@ -12,6 +12,7 @@ public class DanhSchXeHoiTestDrive
         DanhSachXeHoi danhSachXeHoi = new DanhSachXeHoi();
 
         danhSachXeHoi.inDanhSachXeHoi();
+        System.out.println("----------------------------------------");
 
         DanhSachXeHoi xehoi1 = new DanhSachXeHoi(/* 1 */);
         DanhSachXeHoi xehoi2 = new DanhSachXeHoi(/* 2 */);
@@ -26,6 +27,7 @@ public class DanhSchXeHoiTestDrive
         {
             System.out.println("Khong Bang Nhau");
         }
+        System.out.println("--------------------------------------------------");
 
         String n1 = "La";
         String n2 = "Lam";
@@ -38,6 +40,7 @@ public class DanhSchXeHoiTestDrive
         {
             System.out.println("Khong Bang Nhau ");
         }
+        System.out.println("------------------------------------------------------");
 
         if(danhSachXeHoi.equals(n2))
         {

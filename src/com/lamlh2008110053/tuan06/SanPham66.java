@@ -15,6 +15,7 @@ public class SanPham66
 
         }
 
+
         public SanPham66(String n, double g, int s)
         {
             nameSP66 = n;
@@ -25,8 +26,10 @@ public class SanPham66
 
         public void inThongTinSP()
         {
+           
             System.out.println("-------------------------------------------------------------------------------");
             System.out.println("Ten SP: " + nameSP66 + "//" + "Gia Thanh SP: " + giaSP66 + "So Luong SP: " + soLuongSP66);
+                
         }
 
 }
